@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PROD_PORT}/${DATABASE_NAME}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    enable: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${JWK_URI}
+
+
+keycloak:
+  base-url: ${KEYCLOAK_URL}
+  realm: ${REALM_NAME}
+  admin-realm: ${ADMIN_REALM}
+  master-cli-id: ${MASTER_CLIENT:admin-cli}
+  client-id: ${CLIENT_ID}
+  client-secret: ${CLIENT_SECRET}
+  admin:
+    username: ${KEYCLOAK_USERNAME}
+    password: ${KEYCLOAK_PASSWORD}
