@@ -1,9 +1,21 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .login-section{
     border: 1px solid black;
     display: grid;
     justify-items: center;
     gap: 10px;
     padding: 10px 10px;
+    border-radius: 25px 25px 25px 25px;
 }
 
 .login-heading-section, h1 ,h2{
@@ -15,7 +27,7 @@
 }
 
 .headings{
-       color: red;
+       color: #BE2B44;
        font-size: 2em;
 }
 
@@ -25,7 +37,6 @@
 }
 
 .login-input-container{
-    border: 1px red solid;
     display: grid;
     gap: 15px;
     width: 17em;
@@ -34,10 +45,10 @@
 
 .input-container{
     display: grid;
-
+    gap: 8px;
 }
 
-input{
+input[type="text"],input[type="password"]{
     border: 1px #E0E0E0 solid;
     border-radius: 5px 5px 5px 5px;
     height: 2.5em;
@@ -67,3 +78,99 @@ input[type="password"] {
     left: 5px;
     top: 9px;
 }
+
+.form-container{
+    display: grid;
+    justify-content: center;
+}
+
+#login-button{
+    height: 2.5em;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    background: #BE2B44;
+    margin-top: 10px;
+    color: white;
+}
+
+.options-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3px 0 0;
+}
+
+.remember-me{
+    display: flex;
+    gap: 5px;
+}
+
+.forgot-password{
+    text-decoration: none;
+    color: #BE2B44;
+}
+
+#registrationLink{
+     text-decoration: none;
+        color: #BE2B44;
+}
+
+/* larger phones*/
+@media (min-width: 576px) {
+
+    .login-input-container{
+        width: 20em;
+    }
+
+    input[type="text"],input[type="password"]{
+        width: 21em;
+
+    }
+
+    .input-container>label{
+        position: relative;
+        left: 1.5px;
+    }
+
+    #login-button{
+        margin-top: 20px;
+    }
+
+
+}
+/* tablets*/
+@media (min-width: 768px) {
+
+    .login-section{
+        display: grid;
+        justify-content: center;
+    }
+
+    .login-input-container{
+            width: 30em;
+            display: grid;
+            justify-items: center;
+        }
+
+        input[type="text"],input[type="password"]{
+            width: 30em;
+
+        }
+
+        .input-container>label{
+            position: relative;
+            left: 1.5px;
+        }
+
+        #login-button{
+            margin: 20px 20px 0 20px;
+
+        }
+
+        .options-row{
+            width: 92%;
+            display: flex;
+            justify-items: space-between;
+            padding: 0 30px 0 30px;
+        }
+}
+
